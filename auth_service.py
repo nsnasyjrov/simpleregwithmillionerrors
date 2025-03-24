@@ -1,3 +1,5 @@
+import webbrowser
+
 from user_service import UserService
 
 class AuthService:
@@ -18,6 +20,13 @@ class AuthService:
     def register(self):
         print("Введите данные для регистрации")
         username = input("Имя пользователя: ")
+
+        check = self.service.find_user_by_username(username)
+        if check is not None:
+            print("Пользователь с таким именем уже существует!")
+            return
+
+
         password = self.password_verification()
         location = input("Город: ")
         birthday = input("Дата рождения в формате 'YYYY-MM-DD': ")
@@ -33,6 +42,7 @@ class AuthService:
         find_user = self.service.find_user_by_username(username)
 
         if find_user is None:
+            print("Такого пользователя нет в базе данных, повторите запрос!")
             return False
 
         inputed_pass = input("Введите пароль: ")
@@ -43,6 +53,7 @@ class AuthService:
             return False
 
         print("Доступ разрешен!")
+        webbrowser.open("http://localhost:63342/pythonProject1/public/index.html?_ijt=786udfr8tgh6vuhgmatm9cikvk&_ij_reload=RELOAD_ON_SAVE")
         return True
 
 

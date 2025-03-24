@@ -57,5 +57,3 @@ class UserService:
         for user in users:
             if user['username'] == username:
                 return user
-
-        print("Такого пользователя нет в базе данных, повторите запрос!")

@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(feae772147f3932a.jpeg);
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #154e53
+}
+
+.container {
+    background-color: #154e53;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#changeTextButton:hover {
+    background-color: #002fd3;
+}
+
+#dynamicText {
+    margin-top: 10px;
+    font-size: 18px;
+    margin: 20px;
+}
+
+#itemList {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#itemList li {
+    background-color: #fff;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
